@@ -1,0 +1,46 @@
+<!-- Navigation -->
+<nav id="topNav" class="navbar navbar-full navbar-static-top navbar-dark bg-primary m-b-1">
+  <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#navbar">
+            &#9776;
+        </button>
+  <a class="navbar-brand" href="#">SLS</a>
+  <div class="collapse navbar-toggleable-sm" id="navbar">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']">หน้าแรก</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/product']">สินค้า</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/newsall']">ข่าวทั้งหมด</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/staff']">ทีมงาน</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']">เกี่ยวกับเรา</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Services
+                    </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Engage</a>
+          <a class="dropdown-item" href="#">Pontificate</a>
+          <a class="dropdown-item" href="#">Synergize</a>
+        </div>
+      </li>
+    </ul>
+    <!-- Search -->
+    <form class="form-inline pull-xs-right">
+      <input class="form-control" type="text" placeholder="Search">
+      <button class="btn btn-secondary" type="submit">Search</button>
+    </form>
+
+
+  </div>
+</nav>
