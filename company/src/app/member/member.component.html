@@ -1,0 +1,85 @@
+<div class="card">
+  <div class="card-header p-b-0">
+    <h5 class="card-title">
+      <i class="fa fa-sign-in" aria-hidden="true"></i> Register
+    </h5>
+  </div>
+  <div class="card-block">
+    <div class="col-sm-6">
+      <form novalidate #memberForm="ngForm" (ngSubmit)="register(memberForm.value)">
+
+        <div class="form-group">
+          <label for="fullName">ชื่อ-สกุล</label>
+          <input [(ngModel)]="member.fullName" #fullName="ngModel" type="text" class="form-control" id="fullName" name="fullName" aria-describedby="fullNameHelp"
+            placeholder="Enter Full Name" required>
+          <div [hidden]="fullName.valid || fullName.pristine" class="form-control-feedback alert alert-danger">กรุณากรอกชื่อ-สกุล</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">อีเมล์</label>
+          <input [(ngModel)]="member.email" #email="ngModel" type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+            placeholder="Enter email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          <div [hidden]="email.valid || email.pristine" class="form-control-feedback alert alert-danger">
+            <div [hidden]="email.valid || email.pristine" class="form-control-feedback alert alert-danger">
+              <div *ngIf="email.errors && email.errors.required">กรุณากรอกอีเมล์</div>
+              <div *ngIf="email.errors && email.errors.pattern">รูปแบบอีเมล์ไม่ถูกต้อง</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="userId">รหัสผู้ใช้งาน</label>
+          <input [(ngModel)]="member.userId" #userId="ngModel" type="text" class="form-control" id="userId" name="userId" aria-describedby="userIdHelp"
+            placeholder="Enter Username" required>
+          <div [hidden]="userId.valid || userId.pristine" class="form-control-feedback alert alert-danger">กรุณากรอกรหัสผู้ใช้งาน</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">รหัสผ่าน</label>
+          <input [(ngModel)]="member.password" #password="ngModel" type="password" class="form-control" id="password" name="password"
+            placeholder="Password" required minlength="3">
+          <div [hidden]="password.valid || password.pristine" class="form-control-feedback alert alert-danger">
+            <div *ngIf="password.errors && password.errors.minlength"> ความยาวต้องมากกว่า 3 ตัวอักษร</div>
+            <div *ngIf="password.errors && password.errors.required">กรุณากรอกรหัสผ่าน</div>
+          </div>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>เพศ</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sex" id="sex_male" value="male" checked>
+        ชาย
+      </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sex" id="sex_female" value="female">
+       หญิง
+      </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="education">การศึกษา</label>
+          <select class="form-control" [(ngModel)]="member.education" #education="ngModel" id="education" name="education" required>
+       <option selected value="">----กรุณาเลือกรายการ----</option>
+      <option *ngFor="let education of educations" [value]="education"> {{education}}</option>
+    </select>
+          <div [hidden]="education.valid || education.pristine" class="form-control-feedback alert alert-danger">กรุณาเลือกวุฒิการศึกษา</div>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+      <input [(ngModel)]="member.isSubscribed" type="checkbox" class="form-check-input" name="isSubscribed">
+      รับข่าวสารจากเรา?
+    </label>
+        </div>
+
+        <button [disabled]="!memberForm.form.valid" type="submit" class="btn btn-primary">ตกลง</button>
+        <button type="reset" class="btn btn-default">รีเซ็ต</button>
+      </form>
+
+    </div>
+  </div>
+</div>

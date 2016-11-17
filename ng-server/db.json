@@ -1,9 +1,84 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+    "articles": [
+        {
+            "author": "Rosa Flores, CNN",
+            "title": "DREAMers fear deportation under Trump",
+            "description": "Donald Trump's win shattered the dreams and ignited the fears of hundreds of thousands of undocumented immigrants known as \"dreamers.\"",
+            "url": "http://www.cnn.com/2016/11/11/politics/dreamers-fear-deportation-under-trump/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161111090537-02-dreamers-itzel-super-tease.jpg",
+            "publishedAt": "2016-11-12T05:19:17Z"
+        },
+        {
+            "author": "Rosa Flores, CNN",
+            "title": "DREAMers fear deportation under Trump",
+            "description": "Donald Trump's win shattered the dreams and ignited the fears of hundreds of thousands of undocumented immigrants known as \"dreamers.\"",
+            "url": "http://www.cnn.com/2016/11/11/politics/dreamers-fear-deportation-under-trump/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161111090537-02-dreamers-itzel-super-tease.jpg",
+            "publishedAt": "2016-11-12T05:19:17Z"
+        },
+        {
+            "author": "Catherine E. Shoichet, Amanda Jackson and Rolando Zenteno, CNN",
+            "title": "What do anti-Trump protesters want? Here are 5 key demands",
+            "description": "Demonstrations against President-elect Donald Trump are erupting across the United States.",
+            "url": "http://www.cnn.com/2016/11/11/politics/trump-protests-key-demands/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161110113454-11-trump-protests-1110-super-tease.jpg",
+            "publishedAt": "2016-11-12T04:26:51Z"
+        },
+        {
+            "author": "Ray Sanchez, CNN",
+            "title": "Trump supporters cry foul over street protests",
+            "description": "The strong reaction to President-elect Donald Trump's victory has led to a backlash of another kind -- this one from his supporters.",
+            "url": "http://www.cnn.com/2016/11/11/politics/trump-supporters-react-street-protests/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161111150241-trump-protests-denver-1110-super-tease.jpg",
+            "publishedAt": "2016-11-12T00:48:01Z"
+        },
+        {
+            "author": "Danielle Wiener-Bronner",
+            "title": "Donald Trump to turn over business empire to his children",
+            "description": "President-elect Donald Trump is giving control of his sprawling business network to his children as he prepares to assume the presidency.",
+            "url": "http://money.cnn.com/2016/11/11/news/trump-transfers-business/index.html",
+            "urlToImage": "http://i2.cdn.turner.com/money/dam/assets/161111184240-donald-trump-family-780x439.jpg",
+            "publishedAt": "2016-11-11T07:23:39Z"
+        },
+        {
+            "author": "David Heath and Jennifer Agiesta, CNN",
+            "title": "How voters who found both candidates unfit broke",
+            "description": "Nearly 18 million voters cast ballots this election despite believing that neither Donald Trump nor Hillary Clinton were qualified to be president.",
+            "url": "http://www.cnn.com/2016/11/11/politics/hillary-clinton-donald-trump-voters-dislike/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161109151138-04-hillary-clinton-concession-speech-1109-super-tease.jpg",
+            "publishedAt": "2016-11-12T03:34:56Z"
+        },
+        {
+            "author": "Dana Bash and Daniella Diaz, CNN",
+            "title": "First on CNN: Tea Party Patriots warn against Priebus for chief of staff",
+            "description": "President-elect Donald Trump hasn't yet publicly named a chief of staff, but already, a major tea party group is warning him against naming one of his reported top choices.",
+            "url": "http://www.cnn.com/2016/11/11/politics/tea-party-patriots-reince-priebus/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161110160247-reince-priebus-super-tease.jpg",
+            "publishedAt": "2016-11-12T03:23:35Z"
+        },
+        {
+            "author": "Peter Bergen, CNN National Security Analyst",
+            "title": "Trump's national security guru",
+            "description": "Lt. Gen. Michael Flynn, who played a key role in Trump's campaign and may be slated for a leading role in administration, favors an aggressive stance against \"radical Islam\" and some Islamic regimes",
+            "url": "http://www.cnn.com/2016/11/11/opinions/trumps-national-security-guru-general-flynn-bergen/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/160718191848-michael-flynn-super-tease.jpg",
+            "publishedAt": "2016-11-11T22:31:58Z"
+        },
+        {
+            "author": "Daniella Diaz, CNN",
+            "title": "Kremlin: 'Lousy' US relations could improve with Trump",
+            "description": "A top aide to Russian President Vladimir Putin spoke of points of agreement between the Kremlin and President-elect Donald Trump in a wide-ranging interview with CNN Friday, even as he said the relationship with the current White House is \"lousy.\"",
+            "url": "http://www.cnn.com/2016/11/11/politics/russia-2016-election-dmitry-peskov-vladimir-putin/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161111140350-dmitry-peskov-sept-5-super-tease.jpg",
+            "publishedAt": "2016-11-11T21:38:59Z"
+        },
+        {
+            "author": "Manu Raju and Deirdre Walsh, CNN",
+            "title": "How Trump is helping Ryan keep his job as House speaker",
+            "description": "Paul Ryan's speakership seems safe -- and Donald Trump may deserve some of the credit.",
+            "url": "http://www.cnn.com/2016/11/11/politics/donald-trump-paul-ryan-speaker/index.html",
+            "urlToImage": "http://i2.cdn.cnn.com/cnnnext/dam/assets/161012062745-donald-trump-paul-ryan-composite-super-tease.jpg",
+            "publishedAt": "2016-11-11T19:21:58Z"
+        }
+    ]
 }

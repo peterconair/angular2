@@ -1,3 +1,11 @@
-<p>
-  product works!
-</p>
+<div class="row">
+
+  <div *ngFor="let item of products" class="col-md-6">
+    <div class="card card-block">
+      <h3 class="card-title"> {{item.c_title | uppercase}}</h3>
+      <p class="card-text">{{item.c_detail}}</p>
+      <button (click)="onShowProductDetail(item)" class="btn btn-primary"> เข้าเรียน</button>
+    </div>
+  </div>
+
+</div>

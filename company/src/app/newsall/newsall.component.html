@@ -1,3 +1,26 @@
-<p>
-  newsall works!
-</p>
+<!-- Center Column -->
+<!-- Articles -->
+
+<div class="row">
+  <div class="col-md-8">
+    <button class="btn-outline-success" (click)="toggleImage()">{{isToggle?'ซ่อนรูปภาพ' : 'แสดงรูปภาพ'}}</button>
+    <hr>
+    <article class="col-xs-12" *ngFor="let item of news">
+      <h2>{{item.title}}</h2>
+      <img *ngIf="isToggle" [src]="item.urlToImage" class="img-fluid m-x-auto d-block" />
+      <p>{{item.description}}</p>
+      <p><a class="btn btn-outline-success" [href]="item.url" target="_blank"> Read More</a></p>
+      <p class="pull-right"><span class="tag tag-default">{{item.publishedAt | date: 'dd/mm/yyyy hh:mm:ss'}}</span></p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">{{item.author}}</a></li>
+
+      </ul>
+    </article>
+
+  </div>
+  <div class="col-md-4">
+    <app-login></app-login>
+    <app-slide></app-slide>
+  </div>
+</div>
+<!--/Center Column-->

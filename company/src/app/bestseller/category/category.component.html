@@ -1,0 +1,9 @@
+<!-- List-Group Panel -->
+<div class="card">
+  <div class="card-header p-b-0">
+    <h5 class="card-title"><i class="fa fa-random" aria-hidden="true"></i>สินค้า</h5>
+  </div>
+  <div class="list-group list-group-flush">
+    <a href="#" (click)="selectedProduct($event,item)" *ngFor="let item of products" class="list-group-item list-group-item-action">{{item.c_title}}</a>
+  </div>
+</div>

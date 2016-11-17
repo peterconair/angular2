@@ -1,0 +1,48 @@
+<!-- Form -->
+<div class="card">
+  <div class="card-header p-b-0">
+    <h5 class="card-title">
+      <i class="fa fa-sign-in" aria-hidden="true"></i> Register
+    </h5>
+  </div>
+  <div class="card-block">
+    <!-- novalidate ไม่ต้องใช้เว็บ Browser validate  -->
+    <form novalidate #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+      <div class="form-group">
+        <input #fullName="ngModel" ngModel type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name"
+          required>
+        <div [hidden]="fullName.valid || fullName.pristine" class="form-control-feedback alert alert-danger">กรุณากรอกชื่อ-นามสกุล</div>
+
+      </div>
+      <div class="form-group">
+        <input type="email" #email="ngModel" ngModel type="text" class="form-control" id="email" name="email" placeholder="email"
+          required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div [hidden]="email.valid || email.pristine" class="form-control-feedback alert alert-danger">
+
+          <div *ngIf="email.errors && email.errors.required">กรุณากรอกอีเมล์</div>
+          <div *ngIf="email.errors && email.errors.pattern">รูปแบบอีเมล์ไม่ถูกต้อง</div>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input #userName="ngModel" ngModel type="text" class="form-control" id="userName" name="userName" placeholder="Username"
+          required>
+        <div [hidden]="userName.valid || userName.pristine" class="form-control-feedback alert alert-danger">กรุณากรอกรหัสผูู้ใช้งาน</div>
+      </div>
+      <div class="form-group">
+        <input #password="ngModel" ngModel type="password" class="form-control" id="password" name="password" placeholder="Password"
+          required minlength="3">
+        <div [hidden]="password.valid || password.pristine" class="form-control-feedback alert alert-danger">
+          <div *ngIf="email.errors && email.errors.minlength">รหัสผ่านสั่นเกินไป</div>
+          <div *ngIf="email.errors && email.errors.required">กรุณากรอกรหัสผ่าน</div>
+
+        </div>
+
+      </div>
+      <!-- [disabled]="!registerForm.form.valid" ถ้า form validate ไม่ผ่านจะไม่ enable ปุ่ม -->
+      <button [disabled]="!registerForm.form.valid" type="submit" class="btn btn-primary">Log In</button>
+      <button type="reset" class="btn btn-default">รีเซ็ต</button>
+    </form>
+  </div>
+</div>
